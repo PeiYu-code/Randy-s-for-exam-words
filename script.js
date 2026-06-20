@@ -1,122 +1,103 @@
 // 1. 單字資料庫 (包含所有單字)
 const wordBank = [
-  { eng: "seek", ch: "尋找(v.)" },
-  { eng: "audience", ch: "觀眾(n.)" },
-  { eng: "series", ch: "系列(n.)" },
-  { eng: "technology", ch: "科技(n.)" },
-  { eng: "worth", ch: "值得... +Ving(adj.)" },
-  { eng: "foundation", ch: "基金會(n.)" },
-  { eng: "conference", ch: "會議(n.)" },
-  { eng: "increasingly", ch: "越來越...(adv.)" },
-  { eng: "organizer", ch: "籌辦人(n.)" },
-  { eng: "broad", ch: "廣泛的(adj.)" },
-  { eng: "range", ch: "範圍、系列(n.)" },
-  { eng: "field", ch: "領域(n.)" },
-  { eng: "philosophy", ch: "哲學(n.)" },
-  { eng: "launch", ch: "發起(v.)" },
-  { eng: "collection", ch: "收藏品(n.)" },
-  { eng: "numerous", ch: "許多(adj.)+可數n." },
-  { eng: "celebrity", ch: "名人(n.)" },
-  { eng: "fascination", ch: "著迷(n.)" },
-  { eng: "fiction", ch: "虛構的作品(n.)" },
-  { eng: "discuss", ch: "討論(v.)" },
-  { eng: "method", ch: "方式(n.)" },
-  { eng: "as well as", ch: "和" },
-  { eng: "for free", ch: "免費" },
-  { eng: "at present", ch: "現在、當下" },
-  { eng: "give... a try", ch: "嘗試" },
-  { eng: "broaden one's horizons", ch: "拓寬某人的視野" },
-  { eng: "exchange", ch: "交換(n., v.)" },
-  { eng: "expect", ch: "預期(v.)" },
-  { eng: "shelter", ch: "遮蔽、庇護(v., n.)" },
-  { eng: "fierce", ch: "強烈的(adj.)" },
-  { eng: "occupy", ch: "佔據(v.)" },
-  { eng: "occupation", ch: "職業(n.)" },
-  { eng: "vehicle", ch: "車輛(n.)" },
-  { eng: "temporary", ch: "暫時的(adj.)" },
-  { eng: "assistant", ch: "助理(n.)" },
-  { eng: "assist", ch: "協助(v.)" },
-  { eng: "originate", ch: "起源於(v.)" },
-  { eng: "origin", ch: "起源(n.)" },
-  { eng: "original", ch: "起初的(adj.)" },
-  { eng: "event", ch: "事件(n.)" },
-  { eng: "elder", ch: "長輩(n.); (家中的)年長的(adj.)" },
-  { eng: "neighborhood", ch: "鄰近地區(n.)" },
-  { eng: "cooperate", ch: "合作(v.)" },
-  { eng: "arrange", ch: "安排(v.)" },
-  { eng: "arrangement", ch: "安排(n.)" },
-  { eng: "relax", ch: "放鬆(v.)" },
-  { eng: "container", ch: "容器(n.)" },
-  { eng: "contain", ch: "包含(v.)" },
-  { eng: "stroll", ch: "散步(v., n.)" },
-  { eng: "spirit", ch: "精神、本質(n.)" },
-  { eng: "spiritual", ch: "精神上的(adj.)" },
-  { eng: "take part in", ch: "參加" },
-  { eng: "take place", ch: "發生、舉行" },
-  { eng: "come about", ch: "(非預期的)發生" },
-  { eng: "help... out", ch: "幫忙" },
-  { eng: "hand out", ch: "發放" },
-  { eng: "general", ch: "一般的(adj.)" },
-  { eng: "derive", ch: "源自於(v.) +from" },
-  { eng: "release", ch: "發行、釋放(v., n.)" },
-  { eng: "feature", ch: "以...為特色(v., n.)" },
-  { eng: "gossip", ch: "八卦(v., n.)" },
+  { eng: "clothing", ch: "服飾(n.)" },
+  { eng: "style", ch: "款式、風格(n.)" },
+  { eng: "conditions", ch: "情況、條件(n.)" },
+  { eng: "wage", ch: "工資(n.)" },
+  { eng: "increase", ch: "增加(n., v.)" },
+  { eng: "profit", ch: "利潤(n.)、獲益(v.)" },
+  { eng: "effort", ch: "努力(n.)" },
+  { eng: "violate", ch: "違反(v.)" },
+  { eng: "aim", ch: "目的是(v.)" },
+  { eng: "insert", ch: "植入(v.)" },
+  { eng: "demonstrate", ch: "說明(v.)" },
+  { eng: "charity", ch: "慈善機構(n.)" },
+  { eng: "vast", ch: "廣大的(adj.)" },
+  { eng: "majority", ch: "大多數(n.)" },
+  { eng: "sympathy", ch: "同情(n.)" },
+  { eng: "minor", ch: "次要的、輕微的(adj.)" },
+  { eng: "frequently", ch: "頻繁地(adv.)" },
+  { eng: "intentionally", ch: "故意地(adv.)" },
+  { eng: "cycle", ch: "循環(n.)" },
+  { eng: "constantly", ch: "經常地(adv.)" },
+  { eng: "refuse", ch: "拒絕(v.)" },
+  { eng: "process", ch: "過程(n.)" },
+  { eng: "risk", ch: "冒…的風險(v.)" },
+  { eng: "industry", ch: "行業(n.)" },
+  { eng: "in turn", ch: "因此、轉而" },
+  { eng: "put forward something", ch: "提出某事物" },
+  { eng: "be meant to do something", ch: "預期做某事" },
+  { eng: "turn something around", ch: "扭轉某事" },
+  { eng: "virtue", ch: "美德(n.)" },
+  { eng: "honesty", ch: "誠實(n.)" },
+  { eng: "adventure", ch: "冒險(n.)" },
+  { eng: "possess", ch: "擁有(v.)" },
+  { eng: "fellow", ch: "同儕的(adj.)" },
+  { eng: "policy", ch: "政策、原則(n.)" },
+  { eng: "manage", ch: "設法處理(v.)" },
   { eng: "reveal", ch: "揭露(v.)" },
-  { eng: "chase", ch: "追逐(v., n.)" },
-  { eng: "brand", ch: "品牌(n.)" },
-  { eng: "image", ch: "影像、形象(n.)" },
-  { eng: "edit", ch: "編輯(v.)" },
-  { eng: "edition", ch: "版本(n.)" },
-  { eng: "modify", ch: "修改(v.)" },
-  { eng: "modification", ch: "修改(n.)" },
-  { eng: "digitally", ch: "數位地(adv.)" },
-  { eng: "combine", ch: "結合(v.)" },
-  { eng: "combination", ch: "組合、結合(n.)" },
-  { eng: "standard", ch: "標準的(adj.); 標準(n.)" },
-  { eng: "widespread", ch: "廣泛的(adj.)" },
-  { eng: "constantly", ch: "持續地(adv.)" },
-  { eng: "alternative", ch: "另類的、替代的(adj.); 替代方案、選擇(n.)" },
-  { eng: "existing", ch: "現存的(adj.)" },
-  { eng: "exist", ch: "存在(v.)" },
-  { eng: "existence", ch: "存在(n.)" },
-  { eng: "take on", ch: "開始具有" },
-  { eng: "later on", ch: "之後" },
-  { eng: "in the beginning", ch: "起初" },
-  { eng: "too... to...", ch: "太...而無法..." },
-  { eng: "play a/an ... role", ch: "扮演...的角色" },
-  { eng: "astronaut", ch: "太空人(n.)" },
-  { eng: "gravity", ch: "重力(n.)" },
-  { eng: "powdered", ch: "粉狀的(adj.)" },
-  { eng: "regularly", ch: "規律地、經常地(adv.)" },
-  { eng: "tend", ch: "傾向於(v.) +to" },
-  { eng: "gather", ch: "聚集(v.)" },
-  { eng: "vision", ch: "視力(n.)" },
-  { eng: "decrease", ch: "減少(v., n.)" },
-  { eng: "limit", ch: "限制(v.); 極限(n.)" },
-  { eng: "physical", ch: "生理上的(adj.)" },
-  { eng: "circulation", ch: "血液循環(n.)" },
+  { eng: "silent", ch: "沉默、安靜的(adj.)" },
+  { eng: "cope with", ch: "應付、處理(v.)" },
+  { eng: "encounter", ch: "遭遇、遇到(v.)" },
+  { eng: "wound", ch: "傷害(v.)" },
+  { eng: "awful", ch: "糟糕的(adj.)" },
+  { eng: "truth", ch: "真相(n.)" },
+  { eng: "negative", ch: "負面的、否定的(adj.)" },
+  { eng: "reaction", ch: "反應(n.)" },
   { eng: "maintain", ch: "維持(v.)" },
-  { eng: "sweat", ch: "汗水(n.); 流汗(v.)" },
-  { eng: "otherwise", ch: "否則(adv.)" },
-  { eng: "bump", ch: "碰撞(v.)" },
-  { eng: "sacrifice", ch: "犧牲(v., n.)" },
-  { eng: "out of this world", ch: "極好的" },
-  { eng: "work out", ch: "健身" },
-  { eng: "work up a sweat", ch: "(因運動)流汗" },
-  { eng: "have a lie-down", ch: "躺下休息" }
+  { eng: "relationship", ch: "人際關係(n.)" },
+  { eng: "circumstance", ch: "情況(n.)" },
+  { eng: "determine", ch: "確定、決定(v.)" },
+  { eng: "particular", ch: "特定的(adj.)" },
+  { eng: "expose to", ch: "暴露(v.)" },
+  { eng: "embarrassment", ch: "尷尬(n.)" },
+  { eng: "loss", ch: "損失、失去(n.)" },
+  { eng: "cover up something", ch: "掩蓋某事" },
+  { eng: "make up something", ch: "捏造(藉口、謊言等)" },
+  { eng: "save face", ch: "保留顏面" },
+  { eng: "would rather A than B", ch: "寧願A也不要B" },
+  { eng: "stay up", ch: "熬夜" },
+  { eng: "spare one’s feelings", ch: "顧及某人的感受" },
+  { eng: "so as to do something", ch: "為了做某事" },
+  { eng: "keep (someone) out of something", ch: "使(某人)不捲入某事" },
+  { eng: "brilliant", ch: "聰穎、優秀的(adj.)" },
+  { eng: "detective", ch: "偵探(n.)" },
+  { eng: "keen", ch: "敏銳的(adj.)" },
+  { eng: "detail", ch: "細節(n.)" },
+  { eng: "remarkable", ch: "非凡的(adj.)" },
+  { eng: "wonder", ch: "想知道(v.)" },
+  { eng: "publish", ch: "出版(v.)" },
+  { eng: "eventually", ch: "最終(adv.)" },
+  { eng: "exist", ch: "存在(v.)" },
+  { eng: "personality", ch: "人格、個性(n.)" },
+  { eng: "analyze", ch: "分析(v.)" },
+  { eng: "significant", ch: "重大的、顯著的(adj.)" },
+  { eng: "lecture", ch: "講課、講座(n.)" },
+  { eng: "musician", ch: "音樂家(n.)" },
+  { eng: "deny", ch: "否定(v.)" },
+  { eng: "accent", ch: "口音(n.)" },
+  { eng: "flee", ch: "迅速逃離(v.)" },
+  { eng: "clever", ch: "機靈的、聰穎的(adj.)" },
+  { eng: "mystery", ch: "神秘的事物(n.)" },
+  { eng: "emotion", ch: "感情、情緒(n.)" },
+  { eng: "attractive", ch: "有吸引力的(adj.)" },
+  { eng: "admire", ch: "欣賞(v.)" },
+  { eng: "of all time", ch: "有史以來" },
+  { eng: "put pen to paper", ch: "動筆" },
+  { eng: "take off something", ch: "脫下(衣物)" },
+  { eng: "all along", ch: "始終" }
 ];
 
 // 2. 遊戲狀態與記錄變數
-let wordPool = [];        
-let activeEng = [];       
-let activeCh = [];        
+let wordPool = [];
+let activeEng = [];
+let activeCh = [];
 let selectedEngSlot = null;
 let selectedChSlot = null;
 let remainingCount = 0;
 let successScore = 0;
 let errorScore = 0;
-let wrongWordsSet = new Set(); 
-
+let wrongWordsSet = new Set();
 let startTime = null; // 用於計算單輪花費秒數
 
 // ⚠️ 請把你在 Google Apps Script 部署得到的 Web App 網址貼在下方雙引號內：
@@ -134,32 +115,28 @@ function shuffle(array) {
 function initGame() {
   let allWords = [...wordBank];
   shuffle(allWords);
-  
   // 每回嚴格抽取 45 個單字測試
   const gameSize = Math.min(45, allWords.length);
   wordPool = allWords.slice(0, gameSize);
-  
   remainingCount = wordPool.length;
   successScore = 0;
   errorScore = 0;
   wrongWordsSet.clear();
   updateScoreboard();
-
+  
   // ⏱️ 記錄此輪遊戲的起點時間
   startTime = new Date();
-
   activeEng = [];
   activeCh = [];
+  
   const initialDraw = Math.min(5, wordPool.length);
   for (let i = 0; i < initialDraw; i++) {
     const word = wordPool.pop();
     activeEng.push(word);
     activeCh.push(word);
   }
-
   shuffle(activeCh);
   renderColumns();
-
   document.getElementById('result-modal').classList.add('hidden');
   selectedEngSlot = null;
   selectedChSlot = null;
@@ -178,7 +155,7 @@ function renderColumns() {
   const chColumn = document.getElementById('chinese-column');
   engColumn.innerHTML = '';
   chColumn.innerHTML = '';
-
+  
   activeEng.forEach(word => {
     const slot = document.createElement('div');
     slot.className = 'slot fade-in';
@@ -188,13 +165,13 @@ function renderColumns() {
     slot.addEventListener('click', handleEngClick);
     engColumn.appendChild(slot);
   });
-
+  
   activeCh.forEach(word => {
     const slot = document.createElement('div');
     slot.className = 'slot fade-in';
     slot.textContent = word.ch;
     slot.dataset.type = 'ch';
-    slot.dataset.word = word.eng; 
+    slot.dataset.word = word.eng;
     slot.addEventListener('click', handleChClick);
     chColumn.appendChild(slot);
   });
@@ -207,7 +184,6 @@ function handleEngClick(e) {
   }
   selectedEngSlot = e.target;
   selectedEngSlot.classList.add('selected');
-
   if (selectedChSlot) {
     checkMatch();
   }
@@ -220,7 +196,6 @@ function handleChClick(e) {
   }
   selectedChSlot = e.target;
   selectedChSlot.classList.add('selected');
-
   if (selectedEngSlot) {
     checkMatch();
   }
@@ -230,7 +205,7 @@ function handleChClick(e) {
 function checkMatch() {
   const engWord = selectedEngSlot.dataset.word;
   const chWord = selectedChSlot.dataset.word;
-
+  
   if (engWord === chWord) {
     // 配對成功
     selectedEngSlot.classList.add('fade-out');
@@ -238,17 +213,17 @@ function checkMatch() {
     remainingCount--;
     successScore++;
     updateScoreboard();
-
+    
     const currentEng = selectedEngSlot;
     const currentCh = selectedChSlot;
     selectedEngSlot = null;
     selectedChSlot = null;
-
+    
     setTimeout(() => {
       const engIndex = activeEng.findIndex(w => w.eng === engWord);
       const chIndex = activeCh.findIndex(w => w.eng === chWord);
-
       let nextWord = null;
+      
       if (wordPool.length > 0) {
         nextWord = wordPool.pop();
         activeEng[engIndex] = nextWord;
@@ -257,17 +232,17 @@ function checkMatch() {
         activeEng.splice(engIndex, 1);
         activeCh.splice(chIndex, 1);
       }
-
+      
       if (nextWord) {
         currentEng.textContent = nextWord.eng;
         currentEng.dataset.word = nextWord.eng;
         currentEng.classList.remove('selected', 'fade-out', 'fade-in');
-        void currentEng.offsetWidth; 
+        void currentEng.offsetWidth;
         currentEng.classList.add('fade-in');
       } else {
         currentEng.remove();
       }
-
+      
       if (nextWord) {
         currentCh.textContent = nextWord.ch;
         currentCh.dataset.word = nextWord.eng;
@@ -277,45 +252,37 @@ function checkMatch() {
       } else {
         currentCh.remove();
       }
-
+      
       const chColumn = document.getElementById('chinese-column');
       const allChSlots = Array.from(chColumn.children);
-      let currentChData = allChSlots.map(slot => ({
-        text: slot.textContent,
-        wordKey: slot.dataset.word
-      }));
-
+      let currentChData = allChSlots.map(slot => ({ text: slot.textContent, wordKey: slot.dataset.word }));
       shuffle(currentChData);
-
       allChSlots.forEach((slot, index) => {
         slot.textContent = currentChData[index].text;
         slot.dataset.word = currentChData[index].wordKey;
       });
-
+      
       if (activeEng.length === 0) {
         showResult();
       }
     }, 500);
-
   } else {
     // 配對失敗
     errorScore++;
     updateScoreboard();
-
     const wrongEngText = selectedEngSlot.textContent;
     const correctWordObj = wordBank.find(w => w.eng === wrongEngText);
     if (correctWordObj) {
       wrongWordsSet.add(`${correctWordObj.eng}(${correctWordObj.ch})`);
     }
-
     selectedEngSlot.classList.add('wrong');
     selectedChSlot.classList.add('wrong');
-
+    
     const currentEng = selectedEngSlot;
     const currentCh = selectedChSlot;
     selectedEngSlot = null;
     selectedChSlot = null;
-
+    
     setTimeout(() => {
       currentEng.classList.remove('selected', 'wrong');
       currentCh.classList.remove('selected', 'wrong');
@@ -327,11 +294,10 @@ function checkMatch() {
 function showResult() {
   document.getElementById('final-success').textContent = successScore;
   document.getElementById('final-error').textContent = errorScore;
-  
   const wrongWordsList = document.getElementById('wrong-words-list');
   wrongWordsList.innerHTML = '';
-
   let wrongWordsString = "";
+  
   if (wrongWordsSet.size > 0) {
     document.getElementById('wrong-words-box').style.display = 'block';
     let items = [];
@@ -341,21 +307,21 @@ function showResult() {
       li.textContent = wordStr;
       wrongWordsList.appendChild(li);
     });
-    wrongWordsString = items.join(", "); 
+    wrongWordsString = items.join(", ");
   } else {
     document.getElementById('wrong-words-box').style.display = 'none';
     wrongWordsString = "無答錯單字";
   }
-
+  
   // ⏱️ 計算時間花費（秒數）
   const endTime = new Date();
   const timeSpentSeconds = startTime ? Math.round((endTime - startTime) / 1000) : 0;
-
+  
   // 🤫 修正傳輸格式：改用 text/plain 繞過瀏覽器的 CORS 攔截，確保 100% 成功傳送
   if (GOOGLE_APP_URL && GOOGLE_APP_URL !== "YOUR_PASTED_URL_HERE") {
     fetch(GOOGLE_APP_URL, {
       method: 'POST',
-      mode: 'no-cors', 
+      mode: 'no-cors',
       headers: { 'Content-Type': 'text/plain;charset=utf-8' },
       body: JSON.stringify({
         successScore: successScore,
@@ -365,7 +331,6 @@ function showResult() {
       })
     }).catch(err => console.log("Silent logging status:", err));
   }
-
   document.getElementById('result-modal').classList.remove('hidden');
 }
 
